@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ISpecialist } from './shared/specialist.model';
+import { SpecialistService } from './shared/specialist.service';
 
 @Component({
     selector: 'spec',
@@ -23,37 +24,20 @@ import { ISpecialist } from './shared/specialist.model';
     `,
     styles: []
 })
-export class SpecialistListComponent {
+export class SpecialistListComponent implements OnInit {
+
+    specialists: ISpecialist[];
+
+    constructor(private specialistService: SpecialistService) {
+
+    }
+
     getSpecialists(): ISpecialist[] {
-        return SPECIALISTS;
+        return this.specialists;
     }
+
+    ngOnInit() {
+        this.specialistService.getSpecialists()
+        .subscribe((data) => {this.specialists = data});
+    } 
 }
-const SPECIALISTS: ISpecialist []= [
-    {
-        id : 1,
-        firstName: 'Pesho',
-        lastName: 'Metodiev',
-        address: 'Sofia ul. Nezabravka 22',
-        email: 'pesho.metodiev@mail.com',
-        telephone: '0878341254',
-        speciality: 'dentist'
-    },
-    {
-        id : 2,
-        firstName: 'Zdravka',
-        lastName: 'Ivanova',
-        address: 'Sofia ul. Pernik 9',
-        email: 'zdravka.ivanova@mail.com',
-        telephone: '0878341267',
-        speciality: 'receptionist'
-    },
-    {
-        id : 3,
-        firstName: 'Ivo',
-        lastName: 'Zaraliev',
-        address: 'Sofia ul. Kiustendil 15',
-        email: 'ivo.zaraliv@mail.com',
-        telephone: '0878341290',
-        speciality: 'dentist'
-    }
-]

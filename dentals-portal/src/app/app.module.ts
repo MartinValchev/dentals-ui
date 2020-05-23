@@ -6,6 +6,7 @@ import { NavbarComponent } from './nav/navbar.component';
 import {SpecialistListComponent} from './specialist/specialist-list.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
+import { SpecialistService } from './specialist/shared/specialist.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { appRoutes } from './routes';
     BrowserModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [SpecialistService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
