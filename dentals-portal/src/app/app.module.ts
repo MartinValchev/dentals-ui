@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './nav/navbar.component';
 import {SpecialistListComponent} from './specialist/specialist-list.component';
+import { RouterModule } from '@angular/router';
+import { appRoutes } from './routes';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,8 @@ import {SpecialistListComponent} from './specialist/specialist-list.component';
     SpecialistListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
