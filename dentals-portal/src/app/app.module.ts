@@ -7,12 +7,14 @@ import {SpecialistListComponent} from './specialist/specialist-list.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { SpecialistService } from './specialist/shared/specialist.service';
+import { SpecialistDetailComponent } from './specialist/specialist-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    SpecialistListComponent
+    SpecialistListComponent,
+    SpecialistDetailComponent
   ],
   imports: [
     BrowserModule,

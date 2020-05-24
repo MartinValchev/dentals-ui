@@ -6,14 +6,21 @@ import { ISpecialist } from './specialist.model';
 @Injectable()
 export class SpecialistService {
 
-    specialists: ISpecialist[];
-
     getSpecialists(): Observable<ISpecialist[]> {
         let subject = new Subject<ISpecialist[]>();
         setTimeout(() => {
             subject.next(SPECIALISTS); subject.complete();
         }, 100)
         return subject;
+    }
+
+    getSpecialist(id: number): Observable<ISpecialist> {
+        let specialistSubject = new Subject<ISpecialist>();
+        setTimeout(() => {
+            specialistSubject.next(SPECIALISTS.find(specialist => specialist.id == id));
+            specialistSubject.complete();
+        }, 100)
+        return specialistSubject;
     }
 
 }
