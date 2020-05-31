@@ -23,4 +23,5 @@ export class SpecialistDetailComponent implements OnInit {
         });
 
     }
+
 }  
