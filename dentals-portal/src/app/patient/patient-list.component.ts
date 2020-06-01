@@ -9,15 +9,16 @@ import { PatientService } from './shared/patient.service';
         <hr/>
         <div class="row">
         <div *ngFor="let patient of patients" class="col-md-5">
-            <ul>
-                <li> ID: {{patient.id}}</li>
-                <li> First name: {{patient.firstName}}</li>
-                <li> Last name: {{patient.lastName}} </li>
-                <li> Address1: {{patient.address1}} </li>
-                <li *ngIf="patient.address2"> Address: {{patient.address2}} </li>
-                <li> Email: {{patient.email}}</li>
-                <li> Telephone: {{patient.telephone}} </li>
-            </ul>
+            <a href="#">
+                <ul>
+                    <li> First name: {{patient.firstName}}</li>
+                    <li> Last name: {{patient.lastName}} </li>
+                    <li> Address1: {{patient.address1}} </li>
+                    <li *ngIf="patient.address2"> Address: {{patient.address2}} </li>
+                    <li> Email: {{patient.email}}</li>
+                    <li> Telephone: {{patient.telephone}} </li>
+                </ul>
+            </a>
         </div>
     </div>
 `,

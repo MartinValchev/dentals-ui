@@ -12,6 +12,7 @@ import { SpecialistDetailComponent } from './specialist/specialist-detail.compon
 import { Error404Component } from './errors/error404.component';
 import { PatientService } from './patient/shared/patient.service';
 import { PatientListComponent } from './patient/patient-list.component'; 
+import { PatientDetailComponent } from './patient/patient-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { PatientListComponent } from './patient/patient-list.component';
     SpecialistListComponent,
     SpecialistDetailComponent,
     PatientListComponent,
+    PatientDetailComponent,
     Error404Component
   ],
   imports: [

@@ -1,0 +1,19 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-11">
+      <h2>Patient</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div><strong>First Name:</strong> {{patient?.firstName}}</div>
+      <div><strong>Last Name:</strong> {{patient?.lastName}}</div>
+      <div><strong>Address1:</strong> {{patient?.address1}}</div>
+      <div *ngIf="patient.address2"><strong>Address2:</strong> {{patient?.address2}}</div>
+      <div><strong>Email:</strong> {{patient?.email}}</div>
+      <div><strong>Telephone:</strong> {{patient?.telephone}}</div>
+    </div>
+  </div>
+</div>

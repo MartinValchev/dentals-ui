@@ -14,6 +14,15 @@ export class PatientService {
         },100)
         return subject;
     }
+
+    getPatient(id): Observable<IPatient> {
+        let subject = new Subject<IPatient>();
+        setTimeout(() => {
+            subject.next(PATIENTS.find(patient => patient.id == id))
+            subject.complete;
+        }, 100);
+        return subject;
+    }
 }
 
 const PATIENTS = [
@@ -22,7 +31,7 @@ const PATIENTS = [
         firstName: "Plamen",
         lastName: "Hristov",
         address1: "Sofia ul.Ivan Vazov 32",
-        address2: "",
+        address2: "Plovdiv ul.Hrizantema 15",
         telephone: "0878432112",
         email: "plamen.hristov@sun-fish.com"
     },
