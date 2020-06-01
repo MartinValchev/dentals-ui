@@ -11,13 +11,11 @@ export class SpecialistActivatorService implements CanActivate {
    
     constructor(private specialistService: SpecialistService,
         private route: ActivatedRoute, private router: Router) {
-            console.log('in constructor activator')
          
     }
 
     canActivate(route: ActivatedRouteSnapshot):Observable<boolean> | Promise<boolean> | boolean {       
         let id =  route.params['id'];
-        console.log('id: ' + id)
         return new Promise<boolean>((resolve, reject) => {
             setTimeout(() => {
               this.specialistService.getSpecialist(id)

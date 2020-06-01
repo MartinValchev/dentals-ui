@@ -10,7 +10,8 @@ import { SpecialistService } from './specialist/shared/specialist.service';
 import { SpecialistActivatorService } from './specialist/shared/specialist.activator.service';
 import { SpecialistDetailComponent } from './specialist/specialist-detail.component';
 import { Error404Component } from './errors/error404.component';
-import { fromEventPattern } from 'rxjs';
+import { PatientService } from './patient/shared/patient.service';
+import { PatientListComponent } from './patient/patient-list.component'; 
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { fromEventPattern } from 'rxjs';
     NavbarComponent,
     SpecialistListComponent,
     SpecialistDetailComponent,
+    PatientListComponent,
     Error404Component
   ],
   imports: [
@@ -25,7 +27,9 @@ import { fromEventPattern } from 'rxjs';
     RouterModule.forRoot(appRoutes)
   ],
   providers: [SpecialistService,
-    SpecialistActivatorService],
+    SpecialistActivatorService,
+    PatientService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

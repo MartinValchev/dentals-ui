@@ -4,7 +4,7 @@ import { ISpecialist } from './shared/specialist.model';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-    templateUrl: './specialist-detail.component.html',
+    template: './specialist-detail.component.html',
     styles: [`
     .container { padding-left: 20px; padding-right: 20px }
     .event-image { height: 100px; }

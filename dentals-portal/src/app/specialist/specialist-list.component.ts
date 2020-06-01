@@ -22,7 +22,7 @@ import { SpecialistService } from './shared/specialist.service';
             </div>
         </div>
     `,
-    styles: []
+    styles: [`ul {list-style-type: none;}`]
 })
 export class SpecialistListComponent implements OnInit {
 
